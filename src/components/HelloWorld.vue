@@ -39,6 +39,7 @@ export default {
 
 .image {
   float: left;
+  opacity: 0;
 }
 
 .fadeIn {
