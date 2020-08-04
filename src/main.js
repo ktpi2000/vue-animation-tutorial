@@ -4,8 +4,8 @@ import Inview from 'vueinview'
 
 Vue.config.productionTip = false
 
+Vue.use(Inview);
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')
-
-Vue.use(Inview);
