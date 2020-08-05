@@ -4,24 +4,24 @@
       <div class="fadeIn">
         テステステスト
       </div>
-        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeIn': true}" class="image">
+        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeInLeft': true}" class="image">
         <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeInTop': true}" class="image">
-        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeIn': true}" class="image">
+        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeInRight': true}" class="image">
     </div>
     <div class="scroll">scroll down</div>
     <div class="section2">
-        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeIn': true}" class="image">
+        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeInLeft': true}" class="image">
         <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeInTop': true}" class="image">
-        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeIn': true}" class="image">
+        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeInRight': true}" class="image">
     </div>
     <div class="scroll">scroll down</div>
     <div class="section3">
       <div class="fadeIn">
         テステステスト
       </div>
-        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeIn': true}" class="image">
-        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeIn': true}" class="image">
-        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeIn': true}" class="image">
+        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeInLeft': true}" class="image">
+        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeInTop': true}" class="image">
+        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeInRight': true}" class="image">
     </div>
   </div>
 </template>
@@ -47,7 +47,7 @@ export default {
   animation-name: fadein;
   animation-duration: 1.5s;
   animation-timing-function: ease;
-  animation-delay: 0s;
+  animation-delay: 0.2s;
   animation-iteration-count: 1;
   animation-direction: none;
   animation-fill-mode: forwards;
@@ -67,7 +67,7 @@ export default {
 }
 
 .fadeInTop {
-  animation: fadein-top 1.5s 0s ease forwards;
+  animation: fadein-top 1.5s 0.2s ease forwards;
 }
 
 @keyframes fadein-top {
@@ -78,6 +78,36 @@ export default {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.fadeInLeft {
+  animation: fadein-left 1.5s 0.2s ease forwards;
+}
+
+@keyframes fadein-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInRight {
+  animation: fadein-right 1.5s 0.2s ease forwards;
+}
+
+@keyframes fadein-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 </style>
