@@ -5,13 +5,13 @@
         テステステスト
       </div>
         <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeIn': true}" class="image">
-        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeIn': true}" class="image">
+        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeInTop': true}" class="image">
         <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeIn': true}" class="image">
     </div>
     <div class="scroll">scroll down</div>
     <div class="section2">
         <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeIn': true}" class="image">
-        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeIn': true}" class="image">
+        <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeInTop': true}" class="image">
         <img src="@/assets/tokyo.png" width="200px" v-inview:class="{'fadeIn': true}" class="image">
     </div>
     <div class="scroll">scroll down</div>
@@ -45,7 +45,7 @@ export default {
 .fadeIn {
   /* 省略できる*/
   animation-name: fadein;
-  animation-duration: 3s;
+  animation-duration: 1.5s;
   animation-timing-function: ease;
   animation-delay: 0s;
   animation-iteration-count: 1;
@@ -63,6 +63,21 @@ export default {
   }
   100% {
     opacity: 1;
+  }
+}
+
+.fadeInTop {
+  animation: fadein-top 1.5s 0s ease forwards;
+}
+
+@keyframes fadein-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>
